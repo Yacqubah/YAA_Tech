@@ -1,0 +1,16 @@
+{
+  "name": "yaa_tech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm start --prefix backend\" \"npm start --prefix front-end \"",
+    "launch": "concurrently \"npm install\" \"npm install --prefix backend\" \"npm install --prefix front-end \" \"npm start --prefix backend\" \"npm start --prefix front-end \""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
