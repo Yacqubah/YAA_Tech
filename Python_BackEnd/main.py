@@ -39,11 +39,20 @@ memory_db = {"fruits": [{"name": "Cookies"}, {"name": "Cream"}]}
 def get_fruits():
     return Fruits(fruits=memory_db["fruits"])
 
+
+# /login 
+    # username, email, password, phone_number 
+    # check if the users is logged in in the database
+    # return that usewr loged 
+#/signUp
+
+
 # POST endpoint to add a fruit
 @app.post("/fruits")
 def add_fruit(fruit: Fruit):
     memory_db["fruits"].append(fruit.dict())  # Ensure the new fruit is converted to a dictionary
     return fruit
+
 
 # Run the app
 if __name__ == "__main__":
